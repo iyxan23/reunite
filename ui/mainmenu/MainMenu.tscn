@@ -1,28 +1,38 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://theme.tres" type="Theme" id=1]
 [ext_resource path="res://assets/sprites/mc/walk_3.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/mc/walk_5.png" type="Texture" id=3]
-[ext_resource path="res://ui/mainmenu/MCMainMenu.gd" type="Script" id=4]
+[ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0003_6.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/mc/walk_0.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/mc/walk_4.png" type="Texture" id=6]
 [ext_resource path="res://ui/mainmenu/MenuItemHover.gd" type="Script" id=7]
 [ext_resource path="res://assets/sprites/mc/walk_1.png" type="Texture" id=8]
 [ext_resource path="res://assets/sprites/mc/walk_2.png" type="Texture" id=9]
 [ext_resource path="res://ui/mainmenu/menu_dynamicfont.tres" type="DynamicFont" id=10]
-[ext_resource path="res://assets/sprites/mc/idle_0.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0002_7.png" type="Texture" id=11]
 [ext_resource path="res://ui/mainmenu/title_dynamicfont.tres" type="DynamicFont" id=12]
-[ext_resource path="res://assets/sprites/mc/idle_1.png" type="Texture" id=13]
-[ext_resource path="res://assets/sprites/mc/idle_2.png" type="Texture" id=14]
-[ext_resource path="res://assets/sprites/mc/idle_3.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0005_5.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0011_0.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0009_2.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0010_1.png" type="Texture" id=16]
+[ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0006_4.png" type="Texture" id=17]
+[ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0008_3.png" type="Texture" id=18]
+[ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0000_9.png" type="Texture" id=19]
+[ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0001_8.png" type="Texture" id=20]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Camera2D
+
+func _ready():
+	pass # Replace with function body.
+
+func _process(delta):
+	position.x += delta * -70
+"
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "walk",
@@ -32,83 +42,247 @@ animations = [ {
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -640.0
+margin_top = -384.0
+margin_right = -640.0
+margin_bottom = -384.0
 theme = ExtResource( 1 )
 
-[node name="Logo" type="Sprite" parent="."]
+[node name="BackgroundAnimation" type="Node2D" parent="."]
 
-[node name="Title" type="Label" parent="."]
-margin_left = 64.0
-margin_top = 48.0
-margin_right = 496.0
-margin_bottom = 126.0
+[node name="ParallaxBackground" type="ParallaxBackground" parent="BackgroundAnimation"]
+
+[node name="0" type="ParallaxLayer" parent="BackgroundAnimation/ParallaxBackground"]
+position = Vector2( 0, -27 )
+motion_scale = Vector2( 0.3, 0.3 )
+motion_mirroring = Vector2( 2560, 0 )
+
+[node name="Sprite" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/0"]
+texture = ExtResource( 14 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 792.044 )
+
+[node name="Sprite2" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/0"]
+texture = ExtResource( 14 )
+offset = Vector2( 1280, 0 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 792.044 )
+
+[node name="1" type="ParallaxLayer" parent="BackgroundAnimation/ParallaxBackground"]
+position = Vector2( 0, -27 )
+motion_scale = Vector2( 0.3, 0.3 )
+motion_mirroring = Vector2( 2560, 0 )
+
+[node name="Sprite" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/1"]
+texture = ExtResource( 16 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 793.152 )
+
+[node name="Sprite2" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/1"]
+texture = ExtResource( 16 )
+offset = Vector2( 1280, 0 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 793.152 )
+
+[node name="2" type="ParallaxLayer" parent="BackgroundAnimation/ParallaxBackground"]
+position = Vector2( 0, -27 )
+motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 2560, 0 )
+
+[node name="Sprite" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/2"]
+texture = ExtResource( 15 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 792.044 )
+
+[node name="Sprite2" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/2"]
+texture = ExtResource( 15 )
+offset = Vector2( 1280, 0 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 792.044 )
+
+[node name="3" type="ParallaxLayer" parent="BackgroundAnimation/ParallaxBackground"]
+position = Vector2( 0, -27 )
+motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 2560, 0 )
+
+[node name="Sprite" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/3"]
+texture = ExtResource( 18 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 727.986 )
+
+[node name="Sprite2" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/3"]
+texture = ExtResource( 18 )
+offset = Vector2( 1280, 0 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 727.986 )
+
+[node name="4" type="ParallaxLayer" parent="BackgroundAnimation/ParallaxBackground"]
+position = Vector2( 0, -27 )
+motion_scale = Vector2( 0.55, 0.55 )
+motion_mirroring = Vector2( 2560, 0 )
+
+[node name="Sprite" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/4"]
+texture = ExtResource( 17 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 729.456 )
+
+[node name="Sprite2" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/4"]
+texture = ExtResource( 17 )
+offset = Vector2( 1280, 0 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 729.456 )
+
+[node name="5" type="ParallaxLayer" parent="BackgroundAnimation/ParallaxBackground"]
+position = Vector2( 0, -27 )
+motion_scale = Vector2( 0.6, 0.6 )
+motion_mirroring = Vector2( 2560, 0 )
+
+[node name="Sprite" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/5"]
+texture = ExtResource( 13 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 730.192 )
+
+[node name="Sprite2" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/5"]
+texture = ExtResource( 13 )
+offset = Vector2( 1280, 0 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 730.192 )
+
+[node name="6" type="ParallaxLayer" parent="BackgroundAnimation/ParallaxBackground"]
+position = Vector2( 0, -27 )
+motion_mirroring = Vector2( 2560, 0 )
+
+[node name="Sprite" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/6"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 729.456 )
+
+[node name="Sprite2" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/6"]
+texture = ExtResource( 4 )
+offset = Vector2( 1280, 0 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 729.456 )
+
+[node name="7" type="ParallaxLayer" parent="BackgroundAnimation/ParallaxBackground"]
+position = Vector2( 0, -27 )
+motion_mirroring = Vector2( 2560, 0 )
+
+[node name="Sprite" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/7"]
+texture = ExtResource( 11 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 720 )
+
+[node name="Sprite2" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/7"]
+texture = ExtResource( 11 )
+offset = Vector2( 1280, 0 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 720 )
+
+[node name="8" type="ParallaxLayer" parent="BackgroundAnimation/ParallaxBackground"]
+position = Vector2( 0, -27 )
+motion_mirroring = Vector2( 2560, 0 )
+
+[node name="Sprite" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/8"]
+texture = ExtResource( 20 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 792.813 )
+
+[node name="Sprite2" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/8"]
+texture = ExtResource( 20 )
+offset = Vector2( 1280, 0 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 792.813 )
+
+[node name="9" type="ParallaxLayer" parent="BackgroundAnimation/ParallaxBackground"]
+position = Vector2( 0, -27 )
+motion_scale = Vector2( 1.5, 1.5 )
+motion_mirroring = Vector2( 2560, 0 )
+
+[node name="Sprite" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/9"]
+texture = ExtResource( 19 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 789.704 )
+
+[node name="Sprite2" type="Sprite" parent="BackgroundAnimation/ParallaxBackground/9"]
+texture = ExtResource( 19 )
+offset = Vector2( 1280, 0 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 789.704 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 640, 384 )
+current = true
+script = SubResource( 2 )
+
+[node name="Title" type="Label" parent="Camera2D"]
+margin_left = -216.0
+margin_top = -312.0
+margin_right = 216.0
+margin_bottom = -234.0
 custom_fonts/font = ExtResource( 12 )
 text = "Re:Group"
 
-[node name="MCSpriteAnimation" type="AnimatedSprite" parent="."]
-position = Vector2( 955.62, 547.959 )
-scale = Vector2( 9.29509, 9.29509 )
-frames = SubResource( 1 )
-animation = "idle"
-frame = 1
-playing = true
-script = ExtResource( 4 )
-
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 832.0
-margin_top = 408.0
-margin_right = 1056.0
-margin_bottom = 717.0
-
-[node name="StoryMode" type="ToolButton" parent="."]
-margin_left = 64.0
-margin_top = 192.0
-margin_right = 384.0
-margin_bottom = 256.0
+[node name="StoryMode" type="ToolButton" parent="Camera2D"]
+margin_left = -216.0
+margin_top = -125.0
+margin_right = 216.0
+margin_bottom = -53.0
 focus_mode = 0
 custom_fonts/font = ExtResource( 10 )
 enabled_focus_mode = 0
 text = "Story Mode"
-align = 0
 script = ExtResource( 7 )
 otherButtons = [ NodePath("../ArcadeMode"), NodePath("../Settings"), NodePath("../Exit") ]
 
-[node name="ArcadeMode" type="ToolButton" parent="."]
-margin_left = 64.0
-margin_top = 256.0
-margin_right = 384.0
-margin_bottom = 320.0
+[node name="ArcadeMode" type="ToolButton" parent="Camera2D"]
+margin_left = -216.0
+margin_top = -53.0
+margin_right = 216.0
+margin_bottom = 19.0
 focus_mode = 0
 custom_fonts/font = ExtResource( 10 )
 enabled_focus_mode = 0
 text = "Arcade Mode"
-align = 0
 script = ExtResource( 7 )
 otherButtons = [ NodePath("../StoryMode"), NodePath("../Settings"), NodePath("../Exit") ]
 
-[node name="Settings" type="ToolButton" parent="."]
-margin_left = 64.0
-margin_top = 320.0
-margin_right = 384.0
-margin_bottom = 384.0
+[node name="Settings" type="ToolButton" parent="Camera2D"]
+margin_left = -216.0
+margin_top = 19.0
+margin_right = 216.0
+margin_bottom = 91.0
 focus_mode = 0
 custom_fonts/font = ExtResource( 10 )
 enabled_focus_mode = 0
 text = "Settings"
-align = 0
 script = ExtResource( 7 )
 otherButtons = [ NodePath("../StoryMode"), NodePath("../ArcadeMode"), NodePath("../Exit") ]
 
-[node name="Exit" type="ToolButton" parent="."]
-margin_left = 64.0
-margin_top = 384.0
-margin_right = 384.0
-margin_bottom = 448.0
+[node name="Exit" type="ToolButton" parent="Camera2D"]
+margin_left = -216.0
+margin_top = 91.0
+margin_right = 216.0
+margin_bottom = 163.0
 focus_mode = 0
 custom_fonts/font = ExtResource( 10 )
 enabled_focus_mode = 0
 text = "Exit"
-align = 0
 script = ExtResource( 7 )
 otherButtons = [ NodePath("../StoryMode"), NodePath("../ArcadeMode"), NodePath("../Settings") ]
 
-[connection signal="gui_input" from="TextureRect" to="MCSpriteAnimation" method="_on_TextureRect_gui_input"]
+[node name="MCWalkAnimatedSprite" type="AnimatedSprite" parent="Camera2D"]
+position = Vector2( 496, 240 )
+scale = Vector2( 3.98142, 3.98142 )
+frames = SubResource( 1 )
+animation = "walk"
+frame = 1
+playing = true
+flip_h = true
