@@ -86,18 +86,19 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 30.0
-height = 60.0
+height = 55.0
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 43 )
 
 [node name="CharacterAnimation" parent="." instance=ExtResource( 39 )]
-position = Vector2( 0, -74 )
+position = Vector2( 0, -70 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
+frame = 0
 
 [node name="Collider" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -60 )
+position = Vector2( 0, -57.5 )
 shape = SubResource( 2 )
 
 [node name="GroundRayCast" type="RayCast2D" parent="."]
@@ -107,5 +108,5 @@ cast_to = Vector2( 0, 20 )
 [node name="PlayerArea2D" type="Area2D" parent="."]
 
 [node name="Collider" type="CollisionShape2D" parent="PlayerArea2D"]
-position = Vector2( 0, -60 )
+position = Vector2( 0, -57.5 )
 shape = SubResource( 2 )

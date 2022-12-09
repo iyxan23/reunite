@@ -1,27 +1,19 @@
 extends Node2D
 
-export(Array, NodePath) var zoomAreas
-var _zoomAreas = []
-
 onready var camera = $Camera2D
+onready var camera_animation_player = $Camera2D/AnimationPlayer
 onready var player = $Player
 
 func _ready():
-	for path in zoomAreas:
-		var zoomArea = get_node(path) as Area2D
-		$Area2D.connect("body_shape_entered", self, "zoomIn")
-		$Area2D.connect("body_shape_exited", self, "zoomOut")
+	pass
 
 func _process(delta):
+	# make the camera follow the player
 	camera.position.x = player.position.x
 	camera.position.y = player.position.y
 
 func zoomIn():
-	print("zoom in")
-	camera.zoom.x = .75
-	camera.zoom.y = .75
+	camera_animation_player.play("zoom_in")
 
 func zoomOut():
-	print("zoom out")
-	camera.zoom.x = 1
-	camera.zoom.y = 1
+	camera_animation_player.play("zoom_out")
