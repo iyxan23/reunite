@@ -53,14 +53,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 17 ), ExtResource( 9 ), ExtResource( 27 ), ExtResource( 31 ), ExtResource( 13 ), ExtResource( 24 ), ExtResource( 6 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "kick",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 42 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 15 ), ExtResource( 41 ), ExtResource( 16 ), ExtResource( 38 ), ExtResource( 28 ), ExtResource( 23 ), ExtResource( 21 ), ExtResource( 29 ), ExtResource( 25 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "punch",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 34 ), ExtResource( 3 ), ExtResource( 18 ), ExtResource( 14 ), ExtResource( 37 ) ],
@@ -68,20 +68,20 @@ animations = [ {
 "name": "run",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 26 ), ExtResource( 36 ), ExtResource( 22 ), ExtResource( 35 ) ],
-"loop": false,
-"name": "jump",
-"speed": 10.0
+"frames": [ ExtResource( 42 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 15 ), ExtResource( 41 ), ExtResource( 16 ), ExtResource( 38 ), ExtResource( 28 ), ExtResource( 23 ), ExtResource( 21 ), ExtResource( 29 ), ExtResource( 25 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "punch",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 44 ), ExtResource( 45 ) ],
 "loop": true,
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
+"frames": [ ExtResource( 26 ), ExtResource( 36 ), ExtResource( 22 ), ExtResource( 35 ) ],
+"loop": false,
+"name": "jump",
+"speed": 10.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -95,7 +95,7 @@ script = ExtResource( 43 )
 position = Vector2( 0, -70 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
-frame = 0
+frame = 1
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -57.5 )

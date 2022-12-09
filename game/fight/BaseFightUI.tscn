@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/sprites/ui/fight/ult.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/ui/fight/skill_1.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/ui/fight/skill_2.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/ui/fight/skill_3.png" type="Texture" id=4]
+
+[node name="BaseFightUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Skill1" type="Sprite" parent="."]
+position = Vector2( 96, 640 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Skill2" type="Sprite" parent="."]
+position = Vector2( 192, 640 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Skill3" type="Sprite" parent="."]
+position = Vector2( 288, 640 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="Ult" type="Sprite" parent="."]
+position = Vector2( 384, 640 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )

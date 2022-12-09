@@ -1,8 +1,10 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://game/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tiles_demo.png" type="Texture" id=2]
 [ext_resource path="res://game/fight/BaseFight.gd" type="Script" id=3]
+[ext_resource path="res://game/fight/BaseFightUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game/PlayerUI.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=23]
 length = 0.001
@@ -585,12 +587,22 @@ __meta__ = {
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -128 )
 
+[node name="PlayerUI" parent="Player" instance=ExtResource( 5 )]
+margin_left = -96.0
+margin_top = -175.0
+margin_right = -96.0
+margin_bottom = -175.0
+
 [node name="Area2D" type="Area2D" parent="."]
 script = SubResource( 22 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 158, -199 )
 shape = SubResource( 21 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="BaseFightUI" parent="UI" instance=ExtResource( 4 )]
 
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="Area2D" method="_on_Area2D_area_exited"]
