@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/adventurer-attack2-03.png-9ff2a47d1b08c51e9b3b5c9c302ab7e8.res"
+group_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+valid=true
+[deps]
+
+
+source_file="res://assets/sprites/mc/adventurer-attack2-03.png"
+dest_files=[ "res://.import/adventurer-attack2-03.png-9ff2a47d1b08c51e9b3b5c9c302ab7e8.res" ]
+
+[params]
+
+atlas_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+import_mode=0
+crop_to_region=false

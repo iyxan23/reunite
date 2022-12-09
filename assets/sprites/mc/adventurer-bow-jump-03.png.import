@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/adventurer-bow-jump-03.png-c8f537fbaf828844747d6209dabe8d9a.res"
+group_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+valid=true
+[deps]
+
+
+source_file="res://assets/sprites/mc/adventurer-bow-jump-03.png"
+dest_files=[ "res://.import/adventurer-bow-jump-03.png-c8f537fbaf828844747d6209dabe8d9a.res" ]
+
+[params]
+
+atlas_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+import_mode=0
+crop_to_region=false

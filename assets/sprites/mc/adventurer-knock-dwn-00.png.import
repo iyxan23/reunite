@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/adventurer-knock-dwn-00.png-822067d4d4887e62b5fd890311e6f4c1.res"
+group_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+valid=true
+[deps]
+
+
+source_file="res://assets/sprites/mc/adventurer-knock-dwn-00.png"
+dest_files=[ "res://.import/adventurer-knock-dwn-00.png-822067d4d4887e62b5fd890311e6f4c1.res" ]
+
+[params]
+
+atlas_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+import_mode=0
+crop_to_region=false

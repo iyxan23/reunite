@@ -1,17 +1,16 @@
 [gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://theme.tres" type="Theme" id=1]
-[ext_resource path="res://assets/sprites/mc/walk_3.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/mc/walk_5.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/mc/adventurer-walk-04.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/mc/adventurer-walk-02.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0003_6.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/mc/walk_0.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/mc/walk_4.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/mc/adventurer-walk-03.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/mc/adventurer-walk-05.png" type="Texture" id=6]
 [ext_resource path="res://ui/mainmenu/MenuItemHover.gd" type="Script" id=7]
-[ext_resource path="res://assets/sprites/mc/walk_1.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/mc/walk_2.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/mc/adventurer-walk-01.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/mc/adventurer-walk-00.png" type="Texture" id=9]
 [ext_resource path="res://ui/mainmenu/menu_dynamicfont.tres" type="DynamicFont" id=10]
 [ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0002_7.png" type="Texture" id=11]
-[ext_resource path="res://ui/mainmenu/title_dynamicfont.tres" type="DynamicFont" id=12]
 [ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0005_5.png" type="Texture" id=13]
 [ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0011_0.png" type="Texture" id=14]
 [ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0009_2.png" type="Texture" id=15]
@@ -20,6 +19,7 @@
 [ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0008_3.png" type="Texture" id=18]
 [ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0000_9.png" type="Texture" id=19]
 [ext_resource path="res://assets/sprites/side_perspective/backgrounds/forest_0/Layer_0001_8.png" type="Texture" id=20]
+[ext_resource path="res://assets/sprites/reunited.png" type="Texture" id=21]
 
 [sub_resource type="GDScript" id=2]
 script/source = "extends Camera2D
@@ -33,7 +33,7 @@ func _process(delta):
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
@@ -42,9 +42,9 @@ animations = [ {
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -640.0
+margin_left = -635.0
 margin_top = -384.0
-margin_right = -640.0
+margin_right = -635.0
 margin_bottom = -384.0
 theme = ExtResource( 1 )
 
@@ -222,59 +222,51 @@ position = Vector2( 640, 384 )
 current = true
 script = SubResource( 2 )
 
-[node name="Title" type="Label" parent="Camera2D"]
-margin_left = -216.0
-margin_top = -312.0
-margin_right = 216.0
-margin_bottom = -234.0
-custom_fonts/font = ExtResource( 12 )
-text = "Re:Group"
-
 [node name="StoryMode" type="ToolButton" parent="Camera2D"]
 margin_left = -216.0
 margin_top = -125.0
 margin_right = 216.0
-margin_bottom = -53.0
+margin_bottom = -43.0
 focus_mode = 0
 custom_fonts/font = ExtResource( 10 )
 enabled_focus_mode = 0
-text = "Story Mode"
+text = "story mode"
 script = ExtResource( 7 )
 otherButtons = [ NodePath("../ArcadeMode"), NodePath("../Settings"), NodePath("../Exit") ]
 
 [node name="ArcadeMode" type="ToolButton" parent="Camera2D"]
 margin_left = -216.0
-margin_top = -53.0
+margin_top = -43.0
 margin_right = 216.0
-margin_bottom = 19.0
+margin_bottom = 39.0
 focus_mode = 0
 custom_fonts/font = ExtResource( 10 )
 enabled_focus_mode = 0
-text = "Arcade Mode"
+text = "arcade mode"
 script = ExtResource( 7 )
 otherButtons = [ NodePath("../StoryMode"), NodePath("../Settings"), NodePath("../Exit") ]
 
 [node name="Settings" type="ToolButton" parent="Camera2D"]
 margin_left = -216.0
-margin_top = 19.0
+margin_top = 39.0
 margin_right = 216.0
-margin_bottom = 91.0
+margin_bottom = 121.0
 focus_mode = 0
 custom_fonts/font = ExtResource( 10 )
 enabled_focus_mode = 0
-text = "Settings"
+text = "settings"
 script = ExtResource( 7 )
 otherButtons = [ NodePath("../StoryMode"), NodePath("../ArcadeMode"), NodePath("../Exit") ]
 
 [node name="Exit" type="ToolButton" parent="Camera2D"]
 margin_left = -216.0
-margin_top = 91.0
+margin_top = 121.0
 margin_right = 216.0
-margin_bottom = 163.0
+margin_bottom = 203.0
 focus_mode = 0
 custom_fonts/font = ExtResource( 10 )
 enabled_focus_mode = 0
-text = "Exit"
+text = "exit"
 script = ExtResource( 7 )
 otherButtons = [ NodePath("../StoryMode"), NodePath("../ArcadeMode"), NodePath("../Settings") ]
 
@@ -283,6 +275,10 @@ position = Vector2( 496, 240 )
 scale = Vector2( 3.98142, 3.98142 )
 frames = SubResource( 1 )
 animation = "walk"
-frame = 1
 playing = true
 flip_h = true
+
+[node name="Title2" type="Sprite" parent="Camera2D"]
+position = Vector2( -5, -240 )
+scale = Vector2( 1.62712, 1.62712 )
+texture = ExtResource( 21 )

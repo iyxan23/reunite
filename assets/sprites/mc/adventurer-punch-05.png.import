@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/adventurer-punch-05.png-bc8d2c7f2e7c670f465fadb3f3b1e107.res"
+group_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+valid=true
+[deps]
+
+
+source_file="res://assets/sprites/mc/adventurer-punch-05.png"
+dest_files=[ "res://.import/adventurer-punch-05.png-bc8d2c7f2e7c670f465fadb3f3b1e107.res" ]
+
+[params]
+
+atlas_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+import_mode=0
+crop_to_region=false

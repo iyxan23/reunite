@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/adventurer-swrd-shte-01.png-f05c12265285d0485b6df92d7440c897.res"
+group_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+valid=true
+[deps]
+
+
+source_file="res://assets/sprites/mc/adventurer-swrd-shte-01.png"
+dest_files=[ "res://.import/adventurer-swrd-shte-01.png-f05c12265285d0485b6df92d7440c897.res" ]
+
+[params]
+
+atlas_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+import_mode=0
+crop_to_region=false

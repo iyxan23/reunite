@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/adventurer-crouch-walk-05.png-1bbcac7cd2d44e72f53ff717a87917af.res"
+group_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+valid=true
+[deps]
+
+
+source_file="res://assets/sprites/mc/adventurer-crouch-walk-05.png"
+dest_files=[ "res://.import/adventurer-crouch-walk-05.png-1bbcac7cd2d44e72f53ff717a87917af.res" ]
+
+[params]
+
+atlas_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+import_mode=0
+crop_to_region=false

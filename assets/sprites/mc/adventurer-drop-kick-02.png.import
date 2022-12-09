@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/adventurer-drop-kick-02.png-7244cdf52b41012b37bd5fe381f601c5.res"
+group_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+valid=true
+[deps]
+
+
+source_file="res://assets/sprites/mc/adventurer-drop-kick-02.png"
+dest_files=[ "res://.import/adventurer-drop-kick-02.png-7244cdf52b41012b37bd5fe381f601c5.res" ]
+
+[params]
+
+atlas_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+import_mode=0
+crop_to_region=false

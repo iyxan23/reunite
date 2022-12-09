@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/adventurer-idle-00.png-d06d2c9f957a9d5f840d700c30dda1e5.res"
+group_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+valid=true
+[deps]
+
+
+source_file="res://assets/sprites/mc/adventurer-idle-00.png"
+dest_files=[ "res://.import/adventurer-idle-00.png-d06d2c9f957a9d5f840d700c30dda1e5.res" ]
+
+[params]
+
+atlas_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+import_mode=0
+crop_to_region=false

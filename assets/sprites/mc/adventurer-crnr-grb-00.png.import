@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/adventurer-crnr-grb-00.png-477587ccc935c86d2fdda430e3e54476.res"
+group_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+valid=true
+[deps]
+
+
+source_file="res://assets/sprites/mc/adventurer-crnr-grb-00.png"
+dest_files=[ "res://.import/adventurer-crnr-grb-00.png-477587ccc935c86d2fdda430e3e54476.res" ]
+
+[params]
+
+atlas_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+import_mode=0
+crop_to_region=false

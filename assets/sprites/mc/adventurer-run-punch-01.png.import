@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/adventurer-run-punch-01.png-d092ce3b6c46c59081a0e5ee92b3863a.res"
+group_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+valid=true
+[deps]
+
+
+source_file="res://assets/sprites/mc/adventurer-run-punch-01.png"
+dest_files=[ "res://.import/adventurer-run-punch-01.png-d092ce3b6c46c59081a0e5ee92b3863a.res" ]
+
+[params]
+
+atlas_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+import_mode=0
+crop_to_region=false

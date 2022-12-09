@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/adventurer-cast-loop-01.png-675cf6083d94fa36e2cdae41be3001c0.res"
+group_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+valid=true
+[deps]
+
+
+source_file="res://assets/sprites/mc/adventurer-cast-loop-01.png"
+dest_files=[ "res://.import/adventurer-cast-loop-01.png-675cf6083d94fa36e2cdae41be3001c0.res" ]
+
+[params]
+
+atlas_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+import_mode=0
+crop_to_region=false

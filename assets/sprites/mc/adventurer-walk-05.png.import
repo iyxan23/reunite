@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/adventurer-walk-05.png-b9f63c9520aaab9f1f304c2dabe17aa2.res"
+group_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+valid=true
+[deps]
+
+
+source_file="res://assets/sprites/mc/adventurer-walk-05.png"
+dest_files=[ "res://.import/adventurer-walk-05.png-b9f63c9520aaab9f1f304c2dabe17aa2.res" ]
+
+[params]
+
+atlas_file="res://assets/sprites/mc/atlas/adventurer-atlas.png"
+import_mode=0
+crop_to_region=false
